@@ -9,23 +9,23 @@ include_once("Connexion.php");
 abstract class AccessBDD {
 	
     /**
-     * 
+     *
      * @var Connexion
      */
-    protected $conn = null;	
+    protected $conn = null;
 
     /**
-     * constructeur : récupère les variables d'environnement 
+     * constructeur : récupère les variables d'environnement
      * et récupère l'instance de connexion à la BDD
      */
     protected function __construct(){
         try{
-            // récupération des variables d'environnement de l'accès à la BDD 
+            // récupération des variables d'environnement de l'accès à la BDD
             $login = htmlspecialchars($_ENV['BDD_LOGIN'] ?? '');
             $pwd = htmlspecialchars($_ENV['BDD_PWD'] ?? '');
             $bd = htmlspecialchars($_ENV['BDD_BD'] ?? '');
             $server = htmlspecialchars($_ENV['BDD_SERVER'] ?? '');
-            $port = htmlspecialchars($_ENV['BDD_PORT'] ?? '');    
+            $port = htmlspecialchars($_ENV['BDD_PORT'] ?? '');
             // création de la connexion à la BDD
             $this->conn = Connexion::getInstance($login, $pwd, $bd, $server, $port);
         }catch(Exception $e){

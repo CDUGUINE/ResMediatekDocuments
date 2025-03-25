@@ -21,7 +21,7 @@ class Connexion {
 
     /**
      * constructeur privé : connexion à la BDD
-     * @param string $login 
+     * @param string $login
      * @param string $pwd
      * @param string $bd
      * @param string $server
