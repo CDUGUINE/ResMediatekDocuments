@@ -1,5 +1,4 @@
 RewriteEngine on
-
 # Vérifie si la requête est vide (aucun paramètre ou chemin)
 RewriteCond %{QUERY_STRING} ^$ [OR]
 RewriteCond %{REQUEST_URI} ^/?$
