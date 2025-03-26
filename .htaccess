@@ -1,4 +1,10 @@
 RewriteEngine on
+
+# Vérifie si la requête est vide (aucun paramètre ou chemin)
+RewriteCond %{QUERY_STRING} ^$ [OR]
+RewriteCond %{REQUEST_URI} ^/?$
+RewriteRule ^.*$ - [R=400,L]
+
 RewriteCond %{REQUEST_METHOD} =GET
 RewriteRule ^([a-zA-Z0-9_]+)$ src/index.php?table=$1 [B,L]
 RewriteCond %{REQUEST_METHOD} =GET
