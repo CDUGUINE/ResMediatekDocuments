@@ -1,7 +1,8 @@
 <h1>Présentation de l'API</h1>
-Cette API, écrite en PHP, est basée sur la structure de l'API présentée dans le dépôt suivant :<br>
-https://github.com/CNED-SLAM/rest_chocolatein<br>
-Le readme de ce dépôt présente la structure de la base de l'API (rôle de chaque fichier) et comment l'exploiter.<br>
+L'API d'origine est disponible dans le dépôt suivant :<br>
+https://github.com/CNED-SLAM/rest_mediatekdocuments.git<br>
+Le readme de ce dépôt ne présente que les modifications qui ont été apportées.<br>
+Reportez-vous au readme du dépôt d'origine pour en savoir plus sur l'API d'origine.<br>
 Les ajouts faits dans cette API ne concernent que les fichiers '.env' (qui contient les données sensibles d'authentification et d'accès à la BDD) et 'MyAccessBDD.php' (dans lequel de nouvelles fonctions ont été ajoutées pour répondre aux demandes de l'application).<br>
 Cette API permet d'exécuter des requêtes SQL sur la BDD Mediatek86 créée avec le SGBDR MySQL.<br>
 Elle est accessible via une authentification "basique" (avec login="admin", pwd="adminpwd").<br>
